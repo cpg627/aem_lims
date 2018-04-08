@@ -7,3 +7,6 @@ not-fast-forward error : Window->show view->orther / Git-> Git Repositories
 내용이 복잡하므로 다음의 URL을 참조. http://blog.naver.com/PostView.nhn?blogId=sim4858&logNo=220924984480
 동기화 테스트
 *중요한것 1. php프로젝트 생성시 php프로젝트로 생성하여 httpdoc폴더에 파일이 생성되도록 해줄 것. 2. Git Hub 연동시 1에서 생성한 폴더와 동일하게 생성 시켜 줄것.
+2018.04.08 23:31
+Think-PC에 GitHub연동 완료
+Error message 출력하게 하는 방법 찾기 : *php는 콘솔에서는 안되고 실행된 웹 화면에서 출력 할 수 있다. http://minimonk.net/6525

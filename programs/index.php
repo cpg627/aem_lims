@@ -3,6 +3,12 @@
 include_once "../include/layout.inc"; // 레이아웃을 include 함
 require_once '../db/db.php';
 
+/*error Message 출력하는 구문*/
+error_reporting(E_ALL);
+
+ini_set("display_errors", 1);
+
+
 
 
 $base = new Layout;
@@ -24,7 +30,6 @@ if($_GET['p']==false)
     $_GET['p']=1;
     
 }
-
 
 
 $db = new DBC;
