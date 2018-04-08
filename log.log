@@ -6,3 +6,4 @@ Veiw page 작성
 not-fast-forward error : Window->show view->orther / Git-> Git Repositories
 내용이 복잡하므로 다음의 URL을 참조. http://blog.naver.com/PostView.nhn?blogId=sim4858&logNo=220924984480
 동기화 테스트
+*중요한것 1. php프로젝트 생성시 php프로젝트로 생성하여 httpdoc폴더에 파일이 생성되도록 해줄 것. 2. Git Hub 연동시 1에서 생성한 폴더와 동일하게 생성 시켜 줄것.
