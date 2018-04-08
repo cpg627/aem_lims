@@ -255,6 +255,14 @@ class Layout
             case notice :
                 
                 echo "<h3 style='margin: 5px 0 10px 0;text-align:center;'><a href='".$_SERVER['PHP_SELF']."'>공지사항</a></h3>";
+             
+                if($_SESSION['permit']==3)
+                
+                {
+                    
+                    echo "<div style='margin-top:20px;text-align:center;padding:15px;border:1px solid #ddd;'><a href='../write.php?bn=".$this->board[1]."' style='padding:20px;'>글쓰기</a> <a href='../admin.php' style='padding:20px;'>관리</a></div>";
+                    
+                }
                 
                 break;
                 
@@ -263,6 +271,14 @@ class Layout
                 echo "<h3 style='margin: 5px 0 10px 0;text-align:center;'><a href='".$_SERVER['PHP_SELF']."'>프로그램</a></h3>";
                 
                 $this->LayoutMenu($this->pmenu, 1);
+                
+                if($_SESSION['permit']==3)
+                
+                {
+                    
+                    echo "<div style='margin-top:20px;text-align:center;padding:15px;border:1px solid #ddd;'><a href='../write.php?bn=".$this->board[1]."' style='padding:20px;'>글쓰기</a> <a href='../admin.php' style='padding:20px;'>관리</a></div>";
+                    
+                }
                 
                 break;
                 
@@ -275,8 +291,34 @@ class Layout
                 break;
                 
             default :
+               
+                if(isset($_SESSION['id']) && isset($_SESSION['permit']))
                 
-                echo "@@@사이드바 제작중";
+                {
+                    
+                    echo "<div style='margin-top:20px;text-align:center;padding:15px;border:1px solid #ddd;'><b	style='padding:20px;'>";
+                    
+                    switch($_SESSION['permit'])
+                    
+                    {
+                        
+                        case 1 : echo "일반회원";
+                        
+                        break;
+                        
+                        case 2 : echo "특별회원";
+                        
+                        break;
+                        
+                        case 3 : echo "관리자";
+                        
+                        break;
+                        
+                    }
+                    
+                    echo "</b><b style='padding:20px;'>".$_SESSION['id']."</b></div>";
+                    
+                }
                 
         }
         
