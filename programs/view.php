@@ -156,7 +156,7 @@ switch($data[11])
 
 
 
-$cate = ThisTable($data[4], $base->pmenu);
+$cate = ThisTable($data[4], $base->$pmenu);
 
 
 

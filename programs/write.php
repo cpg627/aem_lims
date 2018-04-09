@@ -33,7 +33,7 @@ else if($bn=='programs')
 
 {
     
-    while (list($key, $value) = each($base->pmenu))
+    while (list($key, $value) = each($base->$pmenu))
     
     {
         

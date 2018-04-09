@@ -72,7 +72,7 @@ if($tn=='') //programs 메인
     
     $right = $right."<div class='right' style='float:right'>";
     
-    while (list($key, $value) = each($base->pmenu))
+    while (list($key, $value) = each($base->$pmenu))
     
     {
         

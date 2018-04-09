@@ -10,3 +10,6 @@ not-fast-forward error : Window->show view->orther / Git-> Git Repositories
 2018.04.08 23:31
 Think-PC에 GitHub연동 완료
 Error message 출력하게 하는 방법 찾기 : *php는 콘솔에서는 안되고 실행된 웹 화면에서 출력 할 수 있다. http://minimonk.net/6525
+2018.04.09 mysql 접속 에러 해결
+database 생성을 안해놓아서 문제가 생김. aem_lims database를 생성함. pmenu -> $pmenu로 변경하니 불완전한 화면이 출력됨.
+db에 내용이 없는 것도 이유일것으로 추정.
