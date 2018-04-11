@@ -13,3 +13,11 @@ Error message 출력하게 하는 방법 찾기 : *php는 콘솔에서는 안되
 2018.04.09 mysql 접속 에러 해결
 database 생성을 안해놓아서 문제가 생김. aem_lims database를 생성함. pmenu -> $pmenu로 변경하니 불완전한 화면이 출력됨.
 db에 내용이 없는 것도 이유일것으로 추정.
+2018.04.11 mysql 접속 에러 찾기
+문제 : atal error: Uncaught Error: Class 'mysqli' not found, 해결 시도 1: php.ini파일
+apache restart extension=php_mysqli.dll 앞에 주석도 지움 - 그러고는 phpinfo.php 페이지를 통해 mysqli 모듈이 작동 되고 있는지를 확인
+에러 재 발생 : Couldn't fetch mysqli in
+$row = mysqli_fetch_array($result) -> $row = mysqli_query($con, $sql)
+출처: http://usefull.tistory.com/162 [가득 차 있는 공간]
+=> 문제는 완전히 다른곳에 있었다. aem_lims 이름으로된 talble이 없었던 것. 새로 생성해주니 화면이 불러와 진다.
+따라서 mysqli를 호출 하지 않아도 되었을 것일 수도 다시 되돌려 놓아 보자.

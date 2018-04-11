@@ -4,6 +4,12 @@ require_once './include/layout.inc';
 require_once './db/db.php';
 
 
+/*error Message 출력하는 구문*/
+error_reporting(E_ALL);
+
+ini_set("display_errors", 1);
+
+
 
 $base = new Layout;
 
