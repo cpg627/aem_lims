@@ -21,3 +21,4 @@ $row = mysqli_fetch_array($result) -> $row = mysqli_query($con, $sql)
 출처: http://usefull.tistory.com/162 [가득 차 있는 공간]
 => 문제는 완전히 다른곳에 있었다. aem_lims 이름으로된 talble이 없었던 것. 새로 생성해주니 화면이 불러와 진다.
 따라서 mysqli를 호출 하지 않아도 되었을 것일 수도 다시 되돌려 놓아 보자.
+업로드 테스트
