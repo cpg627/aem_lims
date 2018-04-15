@@ -104,7 +104,7 @@ class Layout
         
         echo "<header>
             
-			<div id='logo'><h1><a href='/helloworld/programs'>SBR system</a></h1></div>
+			<div id='logo'><h1><a href='/aem_lims/programs'>SBR system</a></h1></div>
             
 				<div id='navset'>
             
@@ -120,7 +120,7 @@ class Layout
 					    
 				</div>
 					    
-			<div class='ad_1'>
+			<div class='ad_1'> 
 					    
 				<img src='../pic/Main_background.jpg'>
 					    
@@ -220,7 +220,7 @@ class Layout
         
         {
             
-            $this->login="<a href='./logout.php'>Logout</a>";
+            $this->login="<a href='../logout.php'>Logout</a>";
             
         }
         
@@ -247,8 +247,9 @@ class Layout
     {
         
         $this->board=explode('/', $_SERVER['PHP_SELF']);
+        //echo $this->board[2]; //프로젝트에 aem_lims라는 이름을 한번더 사용 했으므로 board[1]는 aem_lims, board[2]는 program이 표시 된다. 큰 카테고리를 지정하여 사이드 메뉴를 표기
         
-        switch($this->board[1])
+        switch($this->board[2])
         
         {
             

@@ -2,7 +2,7 @@
 
 
 
-require_once './include/layout.inc';
+require_once '../include/layout.inc';
 
 
 
@@ -10,7 +10,7 @@ $base = new Layout;
 
 
 
-$base->link = './include/style.css';
+$base->link = '../include/style.css';
 
 $base->content = "
     

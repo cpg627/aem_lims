@@ -49,7 +49,7 @@ class DBC
     
     {
         
-        $this->result->free;
+        $this->result->free; //메모리 내부 값을 플러싱 해주는 것.
         
         $this->db->close();
         

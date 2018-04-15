@@ -1,0 +1,68 @@
+INSERT INTO programs (no, id, pass, date, time, category, title, content, link, os, korean, image, licence)
+VALUES ('3', 'id03', 'ps03','2018-04-16', '00:20:21', 'Status', 'Status', 'content', 'link', 'os', 'Y', 'image', 3);
+INSERT INTO programs (no, id, pass, date, time, category, title, content, link, os, korean, image, licence)
+VALUES ('3', 'id03', 'ps03','2018-04-16', '00:20:21', 'Status', 'Status', 'content', 'link', 'os', 'Y', 'image', 3);
+INSERT INTO programs (no, id, pass, date, time, category, title, content, link, os, korean, image, licence)
+VALUES ('3', 'id03', 'ps03','2018-04-16', '00:20:21', 'Status', 'Status', 'content', 'link', 'os', 'Y', 'image', 3);
+INSERT INTO programs (no, id, pass, date, time, category, title, content, link, os, korean, image, licence)
+VALUES ('3', 'id03', 'ps03','2018-04-16', '00:20:21', 'Status', 'Status', 'content', 'link', 'os', 'Y', 'image', 3);
+INSERT INTO programs (no, id, pass, date, time, category, title, content, link, os, korean, image, licence)
+VALUES ('3', 'id03', 'ps03','2018-04-16', '00:20:21', 'Status', 'Status', 'content', 'link', 'os', 'Y', 'image', 3);
+INSERT INTO programs (no, id, pass, date, time, category, title, content, link, os, korean, image, licence)
+VALUES ('3', 'id03', 'ps03','2018-04-16', '00:20:21', 'Status', 'Status', 'content', 'link', 'os', 'Y', 'image', 3);
+INSERT INTO programs (no, id, pass, date, time, category, title, content, link, os, korean, image, licence)
+VALUES ('3', 'id03', 'ps03','2018-04-16', '00:20:21', 'Status', 'Status', 'content', 'link', 'os', 'Y', 'image', 3);
+
+category 
+2. 분석의뢰 Request
+3. 분석조회 View
+4. 분석상황 Status
+5. 분석결과 입력
+6. 분석결과 조회
+7. 통계
+8. 그래프
+9. 샘플병 이력 추적
+10. 샘플병 유효기간 알람
+licence 1~5
+
+---------------------------------------------------------
+create table member
+
+(id char(16) not null primary key,
+
+pass char(41) not null,
+
+mail char(40) not null,
+
+regdate date not null,
+
+permit tinyint unsigned not null);
+
+---------------------------------------------------------
+create table programs
+
+(no int unsigned auto_increment not null primary key,
+
+id char(16) not null,
+
+pass char(41) not null,
+
+date date not null,
+
+time time not null,
+
+category char(20) not null,
+
+title varchar(50) not null,
+
+content text not null,
+
+link varchar(100) not null,
+
+OS varchar(50) not null,
+
+korean char(1) not null,
+
+image varchar(100) not null,
+
+licence tinyint not null);

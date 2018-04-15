@@ -1,8 +1,8 @@
 <?php
 
-require_once './include/layout.inc';
+require_once '../include/layout.inc';
 
-require_once './db/db.php';
+require_once '../db/db.php';
 
 
 
@@ -14,7 +14,7 @@ $db->DBI();
 
 $base = new Layout;
 
-$base->link = './include/style.css';
+$base->link = '../include/style.css';
 
 
 

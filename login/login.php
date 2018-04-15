@@ -1,7 +1,7 @@
 <?php
-require_once './include/layout.inc';
+require_once '../include/layout.inc';
 
-require_once './db/db.php';
+require_once '../db/db.php';
 
 
 /*error Message 출력하는 구문*/
@@ -15,7 +15,7 @@ $base = new Layout;
 
 
 
-$base->link = './include/style.css';
+$base->link = '../include/style.css';
 
 
 
@@ -55,7 +55,7 @@ if($num==1)
     
     $_SESSION['permit'] = $data[2];
     
-    echo "<script>location.replace('/');</script>";
+    echo "<script>location.replace('/aem_lims/programs');</script>";
     
 } else if(($id!="" || $pass!="") && $data[0]!=1)
 

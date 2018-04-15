@@ -22,3 +22,7 @@ $row = mysqli_fetch_array($result) -> $row = mysqli_query($con, $sql)
 => 문제는 완전히 다른곳에 있었다. aem_lims 이름으로된 talble이 없었던 것. 새로 생성해주니 화면이 불러와 진다.
 따라서 mysqli를 호출 하지 않아도 되었을 것일 수도 다시 되돌려 놓아 보자.
 업로드 테스트
+2018.04.15 login 폴더 생성 관리
+동일한 layout을 공유하는데 있어서 경로가 달라 include가 복잡해서 폴더의 단계를 동일하게 하고자 login 폴더를 만들어 회원 관리 페이지를 모두 넣음
+layout side메뉴 표기 수정
+프로젝트에 aem_lims라는 이름을 한번더 사용 했으므로 board[1]는 aem_lims, board[2]는 program이 표시 된다. 큰 카테고리를 지정하여 사이드 메뉴를 표기
