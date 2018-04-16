@@ -16,11 +16,12 @@ class Layout
     
     public $title="SBR system"; // 웹 페이지 제목
     
-    private $menu = array('Board'=>'board', 'Programs'=>'programs', 'Notice'=>'notice');
+    public $menu = array('Board'=>'board', 'Programs'=>'programs', 'Notice'=>'notice');
     
-    private $pmenu = array('전체'=>'?tn=all', '압축'=>'?tn=press');
+//    public $pmenu = array('전체'=>'?tn=all', '압축'=>'?tn=press');
+    public $pmenu = array('분석의뢰'=>'1', '분석결과 입력'=>'2', '분석결과 조회'=>'3', '통계'=>'4', 'SPC'=>'5');
     
-    private $bmenu = array('전체'=>'?tn=all', '자유게시판'=>'?tn=press');
+    public $bmenu = array('샘플용기 조회'=>'1', '자유게시판'=>'2');
     
     public $link; // CSS 링크 태그
     
@@ -30,11 +31,10 @@ class Layout
     
     public $board; //게시판 이름 지정
     
-    private $sub; // 서브 메뉴용 변수
+    public $sub; // 서브 메뉴용 변수
     
-    private $login; // 로그인이나 로그아웃을 출력
-    
-    
+    public $login; // 로그인이나 로그아웃을 출력
+   
     
     // 레이아웃을 출력
     
@@ -201,8 +201,7 @@ class Layout
         if($_SESSION['id']=="")
         
         {
-            
-            if(strpos($_SERVER['PHP_SELF'], "login.php"))
+            if(strpos($_SERVER['PHP_SELF'], "login.php")) //문자열이 포함되어 있는지 확인 하는 함수
             
             {
                 
@@ -212,7 +211,7 @@ class Layout
             
             {
                 
-                $this->login="<a href='../login.php'>Login</a>";
+                $this->login="<a href='../login/login.php'>Login</a>";
                 
             }
             
@@ -220,7 +219,7 @@ class Layout
         
         {
             
-            $this->login="<a href='../logout.php'>Logout</a>";
+            $this->login="<a href='../login/logout.php'>Logout</a>";
             
         }
         
@@ -261,7 +260,7 @@ class Layout
                 
                 {
                     
-                    echo "<div style='margin-top:20px;text-align:center;padding:15px;border:1px solid #ddd;'><a href='../write.php?bn=".$this->board[1]."' style='padding:20px;'>글쓰기</a> <a href='../admin.php' style='padding:20px;'>관리</a></div>";
+                    echo "<div style='margin-top:20px;text-align:center;padding:15px;border:1px solid #ddd;'><a href='../write.php?bn=".$this->board[2]."' style='padding:20px;'>글쓰기</a> <a href='../admin.php' style='padding:20px;'>관리</a></div>";
                     
                 }
                 
@@ -277,7 +276,7 @@ class Layout
                 
                 {
                     
-                    echo "<div style='margin-top:20px;text-align:center;padding:15px;border:1px solid #ddd;'><a href='../write.php?bn=".$this->board[1]."' style='padding:20px;'>글쓰기</a> <a href='../admin.php' style='padding:20px;'>관리</a></div>";
+                    echo "<div style='margin-top:20px;text-align:center;padding:15px;border:1px solid #ddd;'><a href='../write.php?bn=".$this->board[2]."' style='padding:20px;'>글쓰기</a> <a href='../admin.php' style='padding:20px;'>관리</a></div>";
                     
                 }
                 

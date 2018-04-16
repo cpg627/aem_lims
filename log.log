@@ -26,3 +26,9 @@ $row = mysqli_fetch_array($result) -> $row = mysqli_query($con, $sql)
 동일한 layout을 공유하는데 있어서 경로가 달라 include가 복잡해서 폴더의 단계를 동일하게 하고자 login 폴더를 만들어 회원 관리 페이지를 모두 넣음
 layout side메뉴 표기 수정
 프로젝트에 aem_lims라는 이름을 한번더 사용 했으므로 board[1]는 aem_lims, board[2]는 program이 표시 된다. 큰 카테고리를 지정하여 사이드 메뉴를 표기
+2018.04.16 index의  pmenu 변수의 특성을 알아내야 다음 단뎨로 갈 수 있다.
+pmenu는 private $pmenu array다.
+Cannot access private property Layout::$pmenu => 에러가 발생한다. private 변수에 접근을 못하고 있다.
+Call_pmenu 함수로 만들어 호출이 가능하도록 함.
+pmenu 변수를 public 으로 선언해주니 While문이 실행 됨
+Array는 변경해서 사용해야 한다.

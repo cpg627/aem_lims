@@ -22,7 +22,6 @@ $tn=$_GET['tn'];
 $onepage=3;
 
 
-
 if($_GET['p']==false)
 
 {
@@ -66,23 +65,22 @@ if($tn=='') //programs 메인
     
     
     
-    $base->content = "<div class='header'><h1>인기 프로그램</h1></div>";
+    $base->content = "<div class='header'><h1>내용 표시 부분</h1></div>";
     
     $left = $left."<div class='left' style='float:left'>";
     
     $right = $right."<div class='right' style='float:right'>";
+
     
-    while (list($key, $value) = each($base->$pmenu))
+    while (list($key, $value) = each($base->pmenu)) //$base는 각 중앙 표시 메뉴의 서식을 결정해준다.
     
     {
-        
+
         $db->query = "select no, date, category, title, os, image, licence from programs where category='".$value."' order by no desc limit 0, 1";/* no으로 정렬을 인기순으로 */
         
         $db->DBQ();
         
         $data=$db->result->fetch_row();
-        
-        
         
         switch($data[6])
         
@@ -90,37 +88,30 @@ if($tn=='') //programs 메인
             
             case 1:
                 
-                $licence='페이웨어';
+                $licence='분석의뢰 완료';
                 
                 break;
                 
             case 2:
                 
-                $licence='부분적 프리웨어';
+                $licence='분석중';
                 
                 break;
                 
             case 3:
                 
-                $licence='프리웨어';
+                $licence='분석완료';
                 
                 break;
                 
             case 4:
                 
-                $licence='쉐어웨어';
-                
-                break;
-                
-            case 5:
-                
-                $licence='부분적 쉐어웨어';
+                $licence='확인완료';
                 
                 break;
                 
             default:
-                
-                $licence='페이지 오류입니다.';
+                $licence='오류 발생';
                 
                 break;
                 
@@ -154,7 +145,7 @@ if($tn=='') //programs 메인
 					    
 					<div class='os'>OS : ".$data[4]."</div>
 					    
-					<div class='licence'>라이센스 : ".$licence."</div>
+					<div class='licence'>진행상태 : ".$licence."</div>
 					    
 				</div>";
                 
