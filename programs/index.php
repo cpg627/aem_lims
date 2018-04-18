@@ -71,8 +71,8 @@ if($tn=='') //programs 메인
     
     $right = $right."<div class='right' style='float:right'>";
 
-    
-    while (list($key, $value) = each($base->pmenu)) //$base는 각 중앙 표시 메뉴의 서식을 결정해준다.
+
+    while (list($key, $value) = each($base->pmenu)) //$base는 각 Side 표시 메뉴의 서식을 결정해준다.
     
     {
 
@@ -82,33 +82,32 @@ if($tn=='') //programs 메인
         
         $data=$db->result->fetch_row();
         
+        echo "value :: ".$value." ::";
+        echo "data :: ".$data[6]." ::";
+        
+        
         switch($data[6])
         
         {
             
-            case 1:
+            case Request:
                 
                 $licence='분석의뢰 완료';
                 
                 break;
                 
-            case 2:
+            case View:
                 
                 $licence='분석중';
                 
                 break;
                 
-            case 3:
+            case Status:
                 
                 $licence='분석완료';
                 
                 break;
                 
-            case 4:
-                
-                $licence='확인완료';
-                
-                break;
                 
             default:
                 $licence='오류 발생';
@@ -135,7 +134,7 @@ if($tn=='') //programs 메인
                     
 				<div class='wrap'>
                     
-					<div class='image'><div><a href='./view.php?v=".$data[0]."'><img src='.".$data[5]."'/></a></div></div>
+					<div class='image'><div><a href='./view.php?v=".$data[0]."'></div></div>
 					    
 					<div class='header'><a href='./view?v=".$data[0]."'>".$data[3]."</a></div>
 					    
@@ -159,7 +158,7 @@ if($tn=='') //programs 메인
                     
 				<div class='wrap'>
                     
-					<div class='image'><div><a href='./view.php?v=".$data[0]."'><img src='.".$data[5]."'/></a></div></div>
+					<div class='image'><div><a href='./view.php?v=".$data[0]."'></div></div>
 					    
 					<div class='header'><a href='./view?v=".$data[0]."'>".$data[3]."</a></div>
 					    

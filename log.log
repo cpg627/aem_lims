@@ -32,3 +32,5 @@ Cannot access private property Layout::$pmenu => 에러가 발생한다. private
 Call_pmenu 함수로 만들어 호출이 가능하도록 함.
 pmenu 변수를 public 으로 선언해주니 While문이 실행 됨
 Array는 변경해서 사용해야 한다.
+2018.04.19 내용 표시 부분에 시범 표시 완료
+구조 자체를 바꿔야 함.

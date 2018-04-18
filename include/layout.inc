@@ -19,7 +19,7 @@ class Layout
     public $menu = array('Board'=>'board', 'Programs'=>'programs', 'Notice'=>'notice');
     
 //    public $pmenu = array('전체'=>'?tn=all', '압축'=>'?tn=press');
-    public $pmenu = array('분석의뢰'=>'1', '분석결과 입력'=>'2', '분석결과 조회'=>'3', '통계'=>'4', 'SPC'=>'5');
+    public $pmenu = array('분석의뢰'=>'Request', '분석결과 입력'=>'View', '분석결과 조회'=>'Status');
     
     public $bmenu = array('샘플용기 조회'=>'1', '자유게시판'=>'2');
     
