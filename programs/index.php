@@ -19,7 +19,7 @@ $base->link = '../include/style.css';
 
 $tn=$_GET['tn'];
 
-$onepage=3;
+$onepage=10;
 
 
 if($_GET['p']==false)
@@ -72,7 +72,7 @@ if($tn=='') //programs 메인
     $right = $right."<div class='right' style='float:right'>";
 
 
-    while (list($key, $value) = each($base->pmenu)) //$base는 각 Side 표시 메뉴의 서식을 결정해준다.
+    while (list($key, $value) = each($base->SBR_menu)) //$base는 각 Side 표시 메뉴의 서식을 결정해준다.
     
     {
 
@@ -138,7 +138,7 @@ if($tn=='') //programs 메인
 					    
 					<div class='header'><a href='./view?v=".$data[0]."'>".$data[3]."</a></div>
 					    
-					<div class='category'>카테고리 : <a href='./?tn=".$data[2]."'>".$key."</a></div>
+					<div class='category'>카테고리 : <a href='./?tn=".$data[2]."' target='_blank'>".$key."</a></div>
 					    
 					<div class='date'>".$data[1]."</div>
 					    
@@ -270,7 +270,7 @@ if($tn!='')
     
     {
         
-        while (list($key, $value) = each($base->pmenu))
+        while (list($key, $value) = each($base->SBR_menu))
         
         {
             
