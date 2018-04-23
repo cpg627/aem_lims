@@ -16,7 +16,7 @@ class Layout
     
     public $title="SBR system"; // 웹 페이지 제목
     
-    public $menu = array('Intro'=>'intro', 'SBR_Lims'=>'SBR_Lims', 'Lab_Manage'=>'lab manage', 'Choi-Q_Potal'=>'Choi-Q_Potal', 'e-Spec'=>'e-Spec');
+    public $menu = array('Intro'=>'intro', 'SBR_Lims'=>'SBR_Lims', 'Lab_Manage'=>'lab_manage', 'Q_Potal'=>'Q_Potal', 'eSpec'=>'eSpec');
     
 //    public $SBR_menu = array('전체'=>'?tn=all', '압축'=>'?tn=press');
     public $SBR_menu = array('분석의뢰'=>'Request', '분석결과 조회'=>'Result');
@@ -257,6 +257,8 @@ class Layout
                 
                 echo "<h3 style='margin: 5px 0 10px 0;text-align:center;'><a href='".$_SERVER['PHP_SELF']."'>Introduction</a></h3>";
              
+                $this->LayoutMenu($this->intro, 1);
+                
                 if($_SESSION['permit']==3)
                 
                 {
@@ -271,7 +273,7 @@ class Layout
                 
                 echo "<h3 style='margin: 5px 0 10px 0;text-align:center;'><a href='".$_SERVER['PHP_SELF']."'>SBR_Lims</a></h3>";
                 
-                $this->LayoutMenu($this->SBR_menu, 1);
+                $this->LayoutMenu($this->SBR_lims, 1);
                 
                 if($_SESSION['permit']==3)
                 
@@ -285,25 +287,9 @@ class Layout
                 
             case lab_manage :
                 
-                echo "<h3 style='margin: 5px 0 10px 0;text-align:center;'><a href='".$_SERVER['PHP_SELF']."'>SBR_Lims</a></h3>";
+                echo "<h3 style='margin: 5px 0 10px 0;text-align:center;'><a href='".$_SERVER['PHP_SELF']."'>Lab_manage</a></h3>";
                 
-                $this->LayoutMenu($this->SBR_menu, 1);
-                
-                if($_SESSION['permit']==3)
-                
-                {
-                    
-                    echo "<div style='margin-top:20px;text-align:center;padding:15px;border:1px solid #ddd;'><a href='../write.php?bn=".$this->board[2]."' style='padding:20px;'>글쓰기</a> <a href='../admin.php' style='padding:20px;'>관리</a></div>";
-                    
-                }
-                
-                break;
-                
-            case Choi-Q_Potal :
-                
-                echo "<h3 style='margin: 5px 0 10px 0;text-align:center;'><a href='".$_SERVER['PHP_SELF']."'>SBR_Lims</a></h3>";
-                
-                $this->LayoutMenu($this->SBR_menu, 1);
+                $this->LayoutMenu($this->Lab_manage, 1);
                 
                 if($_SESSION['permit']==3)
                 
@@ -315,12 +301,28 @@ class Layout
                 
                 break;
                 
+            case Q_Potal :
                 
-            case e-Spec :
+                echo "<h3 style='margin: 5px 0 10px 0;text-align:center;'><a href='".$_SERVER['PHP_SELF']."'>Q_Potal</a></h3>";
+                
+                $this->LayoutMenu($this->q_potal, 1);
+                
+                if($_SESSION['permit']==3)
+                
+                {
+                    
+                    echo "<div style='margin-top:20px;text-align:center;padding:15px;border:1px solid #ddd;'><a href='../write.php?bn=".$this->board[2]."' style='padding:20px;'>글쓰기</a> <a href='../admin.php' style='padding:20px;'>관리</a></div>";
+                    
+                }
+                
+                break;
+                
+                
+            case eSpec :
                 
                 echo "<h3 style='margin: 5px 0 10px 0;text-align:center;'><a href='".$_SERVER['PHP_SELF']."'>게시판</a></h3>";
                 
-                $this->LayoutMenu($this->Lab_menu, 1);
+                $this->LayoutMenu($this->espec, 1);
                 
                 break;
                 

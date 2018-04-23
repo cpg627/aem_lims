@@ -3,7 +3,7 @@ $_Get : 앞의 페이지에서 변수가 넘어오는 것을 받는 부분.
 style.css에서 class = ''의 형식으로 디자인 지정이 가능
 Veiw page 작성
 2018.04.08 Git hub사용
-not-fast-forward error : Window->show view->orther / Git-> Git Repositories
+not-fast-forward error : Window->show view->other / Git-> Git Repositories
 내용이 복잡하므로 다음의 URL을 참조. http://blog.naver.com/PostView.nhn?blogId=sim4858&logNo=220924984480
 동기화 테스트
 *중요한것 1. php프로젝트 생성시 php프로젝트로 생성하여 httpdoc폴더에 파일이 생성되도록 해줄 것. 2. Git Hub 연동시 1에서 생성한 폴더와 동일하게 생성 시켜 줄것.
@@ -34,3 +34,4 @@ pmenu 변수를 public 으로 선언해주니 While문이 실행 됨
 Array는 변경해서 사용해야 한다.
 2018.04.19 내용 표시 부분에 시범 표시 완료
 구조 자체를 바꿔야 함.
+2018.04.23 IIS 서버가 80 포트를 미리 점유

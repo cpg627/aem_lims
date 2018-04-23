@@ -65,13 +65,23 @@ if($tn=='') //programs 메인
     
     
     
-    $base->content = "<div class='header'><h1>내용 표시 부분</h1></div>";
+    $base->content = "<div class='header'><h1>분석결과 조회</h1></div>
+    <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+		<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+				<tbody>
+				<tr><td>검색조건2</td><td>검색조건3</td><td>검색조건4</td></tr>
+				<tr><td>검색조건5</td><td>검색조건6</td><td>검색조건7</td></tr>
+                <tr><td><img src='../pic/btn_search.gif'></td></tr>
+    	        </tbody>
+        </table>
+    ";
     
     $left = $left."<div class='left' style='float:left'>";
     
     $right = $right."<div class='right' style='float:right'>";
 
-
+    //검색조건을 만들어야할 부분
+    
     while (list($key, $value) = each($base->SBR_menu)) //$base는 각 Side 표시 메뉴의 서식을 결정해준다.
     
     {
@@ -81,10 +91,6 @@ if($tn=='') //programs 메인
         $db->DBQ();
         
         $data=$db->result->fetch_row();
-        
-        echo "value :: ".$value." ::";
-        echo "data :: ".$data[6]." ::";
-        
         
         switch($data[6])
         
@@ -131,22 +137,20 @@ if($tn=='') //programs 메인
                 $num=1;
                 
                 $left = $left."
-                    
-				<div class='wrap'>
-                    
-					<div class='image'><div><a href='./view.php?v=".$data[0]."'></div></div>
-					    
-					<div class='header'><a href='./view?v=".$data[0]."'>".$data[3]."</a></div>
-					    
-					<div class='category'>카테고리 : <a href='./?tn=".$data[2]."' target='_blank'>".$key."</a></div>
-					    
-					<div class='date'>".$data[1]."</div>
-					    
-					<div class='os'>OS : ".$data[4]."</div>
-					    
-					<div class='licence'>진행상태 : ".$licence."</div>
-					    
-				</div>";
+
+       		<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+				<tbody>
+                    <tr bgcolor='#FFFFFF'>
+                       <td width='90' align='center'><span class='b01'><a href='./view.php?v=".$data[0]."'></span></td>
+                       <td width='150' align='center'><span class='b01'>카테고리 : <a href='./?tn=".$data[2]."' target='_blank'>".$key."</a></span></td>
+                       <td><span class='b01'>".$data[1]."</span></td>
+                       <td><span class='b01'><a href='./view?v=".$data[0]."'>".$data[3]."</a></span></td>
+                       <td><span class='b01'>OS : ".$data[4]."</span></td>
+                       <td><span class='b01'>진행상태 : ".$licence."</span></td>
+                    </tr>
+    	        </tbody>
+             </table>
+	";
                 
             } else
             
