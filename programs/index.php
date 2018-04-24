@@ -138,15 +138,15 @@ if($tn=='') //programs 메인
                 
                 $left = $left."
 
-       		<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+       		<table width='100%' border='1' cellspacing='0' cellpadding='0'>
 				<tbody>
                     <tr bgcolor='#FFFFFF'>
-                       <td width='90' align='center'><span class='b01'><a href='./view.php?v=".$data[0]."'></span></td>
-                       <td width='150' align='center'><span class='b01'>카테고리 : <a href='./?tn=".$data[2]."' target='_blank'>".$key."</a></span></td>
-                       <td><span class='b01'>".$data[1]."</span></td>
-                       <td><span class='b01'><a href='./view?v=".$data[0]."'>".$data[3]."</a></span></td>
-                       <td><span class='b01'>OS : ".$data[4]."</span></td>
-                       <td><span class='b01'>진행상태 : ".$licence."</span></td>
+                       <td width='15%' align='center'><span class='b01'><a href='./view.php?v=".$data[0]."'></span></td>
+                       <td width='15%' align='center'><span class='b01'>카테고리 : <a href='./?tn=".$data[2]."' target='_blank'>".$key."</a></span></td>
+                       <td width='15%' align='center'><span class='b01'>".$data[1]."</span></td>
+                       <td width='15%' align='center'><span class='b01'><a href='./view?v=".$data[0]."'>".$data[3]."</a></span></td>
+                       <td width='15%' align='center'><span class='b01'>OS : ".$data[4]."</span></td>
+                       <td width='15%' align='center'><span class='b01'>진행상태 : ".$licence."</span></td>
                     </tr>
     	        </tbody>
              </table>
